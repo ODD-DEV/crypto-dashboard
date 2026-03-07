@@ -6,6 +6,7 @@ import { JetBrains_Mono } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { WebsiteJsonLd } from '@/components/seo/JsonLd';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import '../globals.css';
 
 const jetbrainsMono = JetBrains_Mono({
@@ -47,6 +48,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className="dark">
       <body className={`${jetbrainsMono.variable} bg-bg-primary text-text-primary antialiased`}>
+        <GoogleAnalytics />
         <WebsiteJsonLd />
         <NextIntlClientProvider messages={messages}>
           <Header />
