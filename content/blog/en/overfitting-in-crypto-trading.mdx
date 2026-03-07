@@ -1,0 +1,35 @@
+---
+title: "The Overfitting Trap in Crypto Trading"
+description: "How to recognize and avoid overfitting when developing crypto trading strategies. Common pitfalls and practical solutions."
+date: "2026-02-15"
+category: "Education"
+relatedStrategies: ["funding-rate-arbitrage", "order-flow-imbalance"]
+---
+
+# The Overfitting Trap in Crypto Trading
+
+Overfitting is the silent killer of trading strategies. A strategy that achieves 500% returns in backtesting but loses money live is almost certainly overfit. Here's how to spot it and avoid it.
+
+## What is Overfitting?
+
+Overfitting occurs when a model learns the noise in training data rather than the underlying pattern. In trading, this means your strategy has memorized past price movements rather than learning a genuine market inefficiency.
+
+## Warning Signs
+
+1. **Too many parameters** — If your strategy has 10+ tunable parameters, it's likely overfit
+2. **Suspiciously high returns** — Monthly returns above 100% should trigger skepticism
+3. **Narrow parameter sensitivity** — Slight changes in parameters cause dramatic performance drops
+4. **Low trade count** — Fewer trades mean less statistical significance
+
+## How We Fight It
+
+Our AI research pipeline generates ~40 strategies daily. We combat overfitting through:
+
+- **Walk-forward validation** — 4 quarters, 3 must be profitable
+- **Realistic execution modeling** — Entry slippage 0.03%, SL slippage 0.05%
+- **Paper trading** — 30 days of live market monitoring before deployment
+- **Degradation detection** — 70%+ performance drop triggers alerts
+
+## The 3% Survival Rate
+
+Out of ~1,200 strategies tested monthly, only about 3% pass all validation stages. This brutal filter is by design — it's far better to miss a good strategy than to deploy a bad one.

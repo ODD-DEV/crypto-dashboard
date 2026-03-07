@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "AI 크립토 전략 연구소",
+    "description": "AI가 매일 40개 이상의 트레이딩 전략을 생성하고, 엄격한 Walk-Forward 검증을 통과한 전략만 공개합니다."
+  },
+  "nav": {
+    "home": "홈",
+    "strategies": "전략",
+    "dashboard": "대시보드",
+    "blog": "블로그"
+  },
+  "hero": {
+    "title": "AI 기반 크립토 전략 리서치",
+    "subtitle": "AI가 매일 트레이딩 전략을 생성하고 엄격하게 검증합니다. 살아남은 전략만 공개됩니다.",
+    "cta": "전략 보기",
+    "metrics": {
+      "tested": "테스트된 전략",
+      "passRate": "WF 통과율",
+      "paperTrading": "페이퍼 트레이딩",
+      "avgReturn": "월평균 수익률"
+    }
+  },
+  "strategies": {
+    "title": "검증된 전략",
+    "filter": {
+      "all": "전체",
+      "testing": "테스트 중",
+      "live": "라이브",
+      "degraded": "성과 하락"
+    },
+    "metrics": {
+      "return": "수익률",
+      "mdd": "최대 낙폭",
+      "winRate": "승률",
+      "sharpe": "샤프 비율"
+    }
+  },
+  "dashboard": {
+    "title": "리서치 파이프라인",
+    "generated": "오늘 생성된 전략",
+    "funnel": "전략 퍼널",
+    "paperTrading": "페이퍼 트레이딩 현황",
+    "systemStatus": "시스템 상태"
+  },
+  "blog": {
+    "title": "인사이트 & 리서치",
+    "readMore": "더 읽기",
+    "minRead": "분 소요"
+  },
+  "footer": {
+    "disclaimer": "이 사이트는 정보 제공 목적으로만 운영됩니다. 투자 조언이 아닙니다. 과거 실적이 미래 수익을 보장하지 않습니다.",
+    "rights": "All rights reserved."
+  }
+}

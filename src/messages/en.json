@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "AI Crypto Strategy Lab",
+    "description": "AI generates 40+ trading strategies daily. Only those surviving rigorous walk-forward validation are published."
+  },
+  "nav": {
+    "home": "Home",
+    "strategies": "Strategies",
+    "dashboard": "Dashboard",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "AI-Powered Crypto Strategy Research",
+    "subtitle": "Our AI generates and rigorously validates trading strategies every day. Only the survivors are published.",
+    "cta": "View Strategies",
+    "metrics": {
+      "tested": "Strategies Tested",
+      "passRate": "WF Pass Rate",
+      "paperTrading": "Paper Trading",
+      "avgReturn": "Avg Monthly Return"
+    }
+  },
+  "strategies": {
+    "title": "Verified Strategies",
+    "filter": {
+      "all": "All",
+      "testing": "Testing",
+      "live": "Live",
+      "degraded": "Degraded"
+    },
+    "metrics": {
+      "return": "Return",
+      "mdd": "MDD",
+      "winRate": "Win Rate",
+      "sharpe": "Sharpe"
+    }
+  },
+  "dashboard": {
+    "title": "Research Pipeline",
+    "generated": "Generated Today",
+    "funnel": "Strategy Funnel",
+    "paperTrading": "Paper Trading Status",
+    "systemStatus": "System Status"
+  },
+  "blog": {
+    "title": "Insights & Research",
+    "readMore": "Read More",
+    "minRead": "min read"
+  },
+  "footer": {
+    "disclaimer": "This site is for informational purposes only. Not financial advice. Past performance does not guarantee future results.",
+    "rights": "All rights reserved."
+  }
+}
