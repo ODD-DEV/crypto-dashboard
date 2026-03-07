@@ -12,6 +12,7 @@ export interface BlogPost {
   readingTime: string;
   content: string;
   relatedStrategies?: string[];
+  strategySlug?: string;
 }
 
 const BLOG_DIR = path.join(process.cwd(), 'content', 'blog');
@@ -55,5 +56,6 @@ export function getPost(slug: string, locale: string): BlogPost | null {
     readingTime: stats.text,
     content,
     relatedStrategies: data.relatedStrategies,
+    strategySlug: data.strategySlug || undefined,
   };
 }
