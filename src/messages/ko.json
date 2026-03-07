@@ -1,33 +1,29 @@
 {
   "meta": {
-    "title": "AI 크립토 전략 연구소",
-    "description": "AI가 매일 40개 이상의 트레이딩 전략을 생성하고, 엄격한 Walk-Forward 검증을 통과한 전략만 공개합니다."
+    "title": "크립토 리서치 노트",
+    "description": "실제로 먹히는 크립토 트레이딩 전략을 찾아 헤매는 한 너드의 기록. AI가 만들고, 빡세게 테스트하고, 솔직하게 기록합니다."
   },
   "nav": {
     "home": "홈",
-    "strategies": "전략",
-    "dashboard": "대시보드",
-    "blog": "블로그"
+    "about": "소개"
   },
-  "hero": {
-    "title": "AI 기반 크립토 전략 리서치",
-    "subtitle": "AI가 매일 트레이딩 전략을 생성하고 엄격하게 검증합니다. 살아남은 전략만 공개됩니다.",
-    "cta": "전략 보기",
-    "metrics": {
-      "tested": "테스트된 전략",
-      "passRate": "WF 통과율",
-      "paperTrading": "페이퍼 트레이딩",
-      "avgReturn": "월평균 수익률"
-    }
+  "home": {
+    "title": "리서치 노트",
+    "subtitle": "AI한테 트레이딩 전략을 만들게 하고, 진짜 되는지 안 되는지 고문 수준으로 테스트하는 블로그입니다.",
+    "recentPosts": "최근 글",
+    "allPosts": "전체 글 보기",
+    "readMore": "더 읽기",
+    "minRead": "분 소요",
+    "labLink": "백테스트 데이터 보기"
   },
-  "strategies": {
-    "title": "검증된 전략",
-    "filter": {
-      "all": "전체",
-      "testing": "테스트 중",
-      "live": "라이브",
-      "degraded": "성과 하락"
-    },
+  "about": {
+    "title": "소개",
+    "systemStatus": "시스템 상태",
+    "stats": "통계"
+  },
+  "lab": {
+    "title": "백테스트 랩",
+    "backToPost": "글로 돌아가기",
     "metrics": {
       "return": "누적수익률",
       "mdd": "최대 낙폭",
@@ -35,20 +31,8 @@
       "sharpe": "샤프 비율"
     }
   },
-  "dashboard": {
-    "title": "리서치 파이프라인",
-    "generated": "오늘 생성된 전략",
-    "funnel": "전략 퍼널",
-    "paperTrading": "페이퍼 트레이딩 현황",
-    "systemStatus": "시스템 상태"
-  },
-  "blog": {
-    "title": "인사이트 & 리서치",
-    "readMore": "더 읽기",
-    "minRead": "분 소요"
-  },
   "footer": {
-    "disclaimer": "이 사이트는 정보 제공 목적으로만 운영됩니다. 투자 조언이 아닙니다. 과거 실적이 미래 수익을 보장하지 않습니다.",
+    "disclaimer": "개인 리서치 블로그입니다. 투자 조언이 아닙니다. 과거 실적이 미래 수익을 보장하지 않습니다. 저는 그냥 키보드 든 너드입니다.",
     "rights": "All rights reserved."
   }
 }

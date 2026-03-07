@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://aicryptolab.vercel.app';
   return {
-    title: 'AI Crypto Strategy Lab',
-    description: 'AI-powered crypto trading strategy research and validation',
+    title: 'Crypto Research Notes',
+    description: "One nerd's quest to find crypto trading strategies that actually work. AI-generated, rigorously tested, honestly reported.",
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
       languages: {

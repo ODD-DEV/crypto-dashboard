@@ -1,33 +1,29 @@
 {
   "meta": {
-    "title": "AI Crypto Strategy Lab",
-    "description": "AI generates 40+ trading strategies daily. Only those surviving rigorous walk-forward validation are published."
+    "title": "Crypto Research Notes",
+    "description": "One nerd's quest to find crypto trading strategies that actually work. AI-generated, rigorously tested, honestly reported."
   },
   "nav": {
     "home": "Home",
-    "strategies": "Strategies",
-    "dashboard": "Dashboard",
-    "blog": "Blog"
+    "about": "About"
   },
-  "hero": {
-    "title": "AI-Powered Crypto Strategy Research",
-    "subtitle": "Our AI generates and rigorously validates trading strategies every day. Only the survivors are published.",
-    "cta": "View Strategies",
-    "metrics": {
-      "tested": "Strategies Tested",
-      "passRate": "WF Pass Rate",
-      "paperTrading": "Paper Trading",
-      "avgReturn": "Avg Monthly Return"
-    }
+  "home": {
+    "title": "Research Notes",
+    "subtitle": "I let AI generate trading strategies, then torture-test them until they confess whether they actually work.",
+    "recentPosts": "Recent Posts",
+    "allPosts": "All Posts",
+    "readMore": "Read more",
+    "minRead": "min read",
+    "labLink": "View backtest data"
   },
-  "strategies": {
-    "title": "Verified Strategies",
-    "filter": {
-      "all": "All",
-      "testing": "Testing",
-      "live": "Live",
-      "degraded": "Degraded"
-    },
+  "about": {
+    "title": "About",
+    "systemStatus": "System Status",
+    "stats": "Stats"
+  },
+  "lab": {
+    "title": "Backtest Lab",
+    "backToPost": "Back to post",
     "metrics": {
       "return": "Cumulative",
       "mdd": "MDD",
@@ -35,20 +31,8 @@
       "sharpe": "Sharpe"
     }
   },
-  "dashboard": {
-    "title": "Research Pipeline",
-    "generated": "Generated Today",
-    "funnel": "Strategy Funnel",
-    "paperTrading": "Paper Trading Status",
-    "systemStatus": "System Status"
-  },
-  "blog": {
-    "title": "Insights & Research",
-    "readMore": "Read More",
-    "minRead": "min read"
-  },
   "footer": {
-    "disclaimer": "This site is for informational purposes only. Not financial advice. Past performance does not guarantee future results.",
+    "disclaimer": "This is a personal research blog. Not financial advice. Past performance does not guarantee future results. I'm just a nerd with a keyboard.",
     "rights": "All rights reserved."
   }
 }

@@ -11,7 +11,7 @@ export function Footer() {
           {t('disclaimer')}
         </p>
         <p className="mt-4 text-center text-xs text-text-muted">
-          &copy; {year} AI CryptoLab. {t('rights')}
+          &copy; {year} Crypto Research Notes. {t('rights')}
         </p>
       </div>
     </footer>

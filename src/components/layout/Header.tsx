@@ -8,9 +8,7 @@ import { LocaleSwitcher } from './LocaleSwitcher';
 
 const navLinks = [
   { href: '/', key: 'home' },
-  { href: '/strategies', key: 'strategies' },
-  { href: '/dashboard', key: 'dashboard' },
-  { href: '/blog', key: 'blog' },
+  { href: '/about', key: 'about' },
 ] as const;
 
 export function Header() {
@@ -26,9 +24,10 @@ export function Header() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-bg-primary/80 backdrop-blur"
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="font-[family-name:var(--font-jetbrains)] text-xl font-bold tracking-tight">
-          <span className="text-accent-profit">AI</span>
-          <span className="text-text-primary">CryptoLab</span>
+        <Link href="/" className="font-[family-name:var(--font-jetbrains)] text-lg font-bold tracking-tight">
+          <span className="text-text-secondary">crypto</span>
+          <span className="text-text-primary">research</span>
+          <span className="text-accent-profit">notes</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">

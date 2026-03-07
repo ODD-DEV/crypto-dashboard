@@ -2,9 +2,9 @@ export function WebsiteJsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'AI Crypto Strategy Lab',
+    name: 'Crypto Research Notes',
     url: process.env.NEXT_PUBLIC_BASE_URL || 'https://aicryptolab.vercel.app',
-    description: 'AI-powered crypto trading strategy research and validation platform',
+    description: 'Personal research blog about AI-generated crypto trading strategies',
   };
   return (
     <script
@@ -34,7 +34,7 @@ export function ArticleJsonLd({
     url,
     publisher: {
       '@type': 'Organization',
-      name: 'AI Crypto Strategy Lab',
+      name: 'Crypto Research Notes',
     },
   };
   return (
