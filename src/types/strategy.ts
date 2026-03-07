@@ -4,6 +4,7 @@ export interface Strategy {
   concept: { en: string; ko: string };
   status: 'testing' | 'live' | 'degraded' | 'failed';
   coins: string[];
+  backtestPeriod: { start: string; end: string };
   metrics: {
     totalReturn: number;
     monthlyAvgReturn: number;

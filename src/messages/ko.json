@@ -29,7 +29,7 @@
       "degraded": "성과 하락"
     },
     "metrics": {
-      "return": "수익률",
+      "return": "누적수익률",
       "mdd": "최대 낙폭",
       "winRate": "승률",
       "sharpe": "샤프 비율"

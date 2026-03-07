@@ -29,7 +29,7 @@
       "degraded": "Degraded"
     },
     "metrics": {
-      "return": "Return",
+      "return": "Cumulative",
       "mdd": "MDD",
       "winRate": "Win Rate",
       "sharpe": "Sharpe"

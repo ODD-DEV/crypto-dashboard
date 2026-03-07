@@ -10,27 +10,40 @@ function seededRandom(seed: number) {
 }
 
 function generateEquityCurve(
-  monthlyAvg: number,
+  totalReturn: number,
   months: number,
   seed: number
 ): { date: string; value: number }[] {
   const rng = seededRandom(seed);
+  const totalDays = months * 30;
+  // Target final value based on totalReturn (e.g., 247.3 -> 347.3)
+  const targetFinal = 100 + totalReturn;
+  // Daily compound rate to hit the target
+  const dailyRate = Math.pow(targetFinal / 100, 1 / totalDays) - 1;
+
   const points: { date: string; value: number }[] = [];
   let value = 100;
   const startDate = new Date('2025-06-01');
 
-  for (let day = 0; day < months * 30; day++) {
+  for (let day = 0; day < totalDays; day++) {
     const date = new Date(startDate);
     date.setDate(date.getDate() + day);
-    const dailyReturn = monthlyAvg / 30 / 100;
-    const noise = (rng() - 0.5) * 0.04;
-    value *= 1 + dailyReturn + noise;
+    const noise = (rng() - 0.5) * 0.02;
+    value *= 1 + dailyRate + noise;
     if (value < 10) value = 10;
     points.push({
       date: date.toISOString().split('T')[0],
       value: Math.round(value * 100) / 100,
     });
   }
+
+  // Scale to match exact totalReturn at the end
+  const actualFinal = points[points.length - 1].value;
+  const scale = targetFinal / actualFinal;
+  for (const p of points) {
+    p.value = Math.round(((p.value - 100) * scale + 100) * 100) / 100;
+  }
+
   return points;
 }
 
@@ -178,6 +191,7 @@ export const mockStrategies: Strategy[] = [
     },
     status: 'live',
     coins: ['BTC', 'ETH', 'SOL', 'LINK'],
+    backtestPeriod: { start: '2025-06-01', end: '2026-02-28' },
     metrics: {
       totalReturn: 247.3,
       monthlyAvgReturn: 28.4,
@@ -188,7 +202,7 @@ export const mockStrategies: Strategy[] = [
       totalTrades: 312,
     },
     walkForward: generateWalkForward(1001),
-    equityCurve: generateEquityCurve(28.4, 9, 1001),
+    equityCurve: generateEquityCurve(247.3, 9, 1001),
     monthlyReturns: generateMonthlyReturns(28.4, 1001),
     trades: generateTrades(candles1, ['BTC', 'ETH', 'SOL', 'LINK'], 1001),
     candles: candles1,
@@ -204,6 +218,7 @@ export const mockStrategies: Strategy[] = [
     },
     status: 'testing',
     coins: ['BTC', 'ADA', 'AVAX'],
+    backtestPeriod: { start: '2025-07-01', end: '2026-02-28' },
     metrics: {
       totalReturn: 156.7,
       monthlyAvgReturn: 19.6,
@@ -214,7 +229,7 @@ export const mockStrategies: Strategy[] = [
       totalTrades: 248,
     },
     walkForward: generateWalkForward(2002),
-    equityCurve: generateEquityCurve(19.6, 8, 2002),
+    equityCurve: generateEquityCurve(156.7, 8, 2002),
     monthlyReturns: generateMonthlyReturns(19.6, 2002),
     trades: generateTrades(candles2, ['BTC', 'ADA', 'AVAX'], 2002),
     candles: candles2,
@@ -230,6 +245,7 @@ export const mockStrategies: Strategy[] = [
     },
     status: 'live',
     coins: ['BTC', 'ETH', 'HBAR', 'SUI'],
+    backtestPeriod: { start: '2025-07-01', end: '2026-02-28' },
     metrics: {
       totalReturn: 189.4,
       monthlyAvgReturn: 23.7,
@@ -240,7 +256,7 @@ export const mockStrategies: Strategy[] = [
       totalTrades: 187,
     },
     walkForward: generateWalkForward(3003),
-    equityCurve: generateEquityCurve(23.7, 8, 3003),
+    equityCurve: generateEquityCurve(189.4, 8, 3003),
     monthlyReturns: generateMonthlyReturns(23.7, 3003),
     trades: generateTrades(candles3, ['BTC', 'ETH', 'HBAR', 'SUI'], 3003),
     candles: candles3,
@@ -256,6 +272,7 @@ export const mockStrategies: Strategy[] = [
     },
     status: 'testing',
     coins: ['BTC', 'ETH', 'SOL', 'NEAR', 'APT'],
+    backtestPeriod: { start: '2025-08-01', end: '2026-02-28' },
     metrics: {
       totalReturn: 112.8,
       monthlyAvgReturn: 16.1,
@@ -266,7 +283,7 @@ export const mockStrategies: Strategy[] = [
       totalTrades: 156,
     },
     walkForward: generateWalkForward(4004),
-    equityCurve: generateEquityCurve(16.1, 7, 4004),
+    equityCurve: generateEquityCurve(112.8, 7, 4004),
     monthlyReturns: generateMonthlyReturns(16.1, 4004),
     trades: generateTrades(candles4, ['BTC', 'ETH', 'SOL', 'NEAR', 'APT'], 4004),
     candles: candles4,
@@ -282,6 +299,7 @@ export const mockStrategies: Strategy[] = [
     },
     status: 'degraded',
     coins: ['BTC', 'ETH'],
+    backtestPeriod: { start: '2025-07-01', end: '2026-02-28' },
     metrics: {
       totalReturn: 67.2,
       monthlyAvgReturn: 8.4,
@@ -292,7 +310,7 @@ export const mockStrategies: Strategy[] = [
       totalTrades: 94,
     },
     walkForward: generateWalkForward(5005),
-    equityCurve: generateEquityCurve(8.4, 8, 5005),
+    equityCurve: generateEquityCurve(67.2, 8, 5005),
     monthlyReturns: generateMonthlyReturns(8.4, 5005),
     trades: generateTrades(candles5, ['BTC', 'ETH'], 5005),
     candles: candles5,
@@ -308,6 +326,7 @@ export const mockStrategies: Strategy[] = [
     },
     status: 'testing',
     coins: ['SOL', 'LINK', 'AVAX', 'SUI', 'BCH'],
+    backtestPeriod: { start: '2025-09-01', end: '2026-02-28' },
     metrics: {
       totalReturn: 94.5,
       monthlyAvgReturn: 15.8,
@@ -318,7 +337,7 @@ export const mockStrategies: Strategy[] = [
       totalTrades: 203,
     },
     walkForward: generateWalkForward(6006),
-    equityCurve: generateEquityCurve(15.8, 6, 6006),
+    equityCurve: generateEquityCurve(94.5, 6, 6006),
     monthlyReturns: generateMonthlyReturns(15.8, 6006),
     trades: generateTrades(candles6, ['SOL', 'LINK', 'AVAX', 'SUI', 'BCH'], 6006),
     candles: candles6,
