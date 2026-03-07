@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed": "npx tsx scripts/seed-supabase.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.98.0",
     "@tailwindcss/typography": "^0.5.19",
     "framer-motion": "^12.35.0",
     "gray-matter": "^4.0.3",
@@ -29,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
