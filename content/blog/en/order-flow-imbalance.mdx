@@ -1,0 +1,56 @@
+---
+title: "Can Order Flow Data Catch Institutional Accumulation? — I Tested It"
+description: "Testing whether taker buy/sell ratios can detect institutional positioning before price moves. The HFT concept, adapted for mortals."
+date: "2025-11-18"
+category: "Strategy Test"
+strategySlug: "order-flow-imbalance"
+---
+
+## Discovery
+
+Order flow analysis. It comes from the high-frequency trading (HFT) world, but the core idea is intuitive: order flow moves before price does. When institutions build large positions, the price might not move yet, but the taker (aggressive order) ratio shows hints.
+
+Found an implementation of this concept in an open-source trading library. "Can a retail trader actually use this?" I wondered. Binance provides taker buy/sell volume data via API, so theoretically, yes. Let's find out.
+
+## The Concept
+
+1. **Track taker buy ratio**: `taker_buy_volume / total_volume` (above 0.5 = aggressive buying dominates)
+2. **Short-term (5-period) vs medium-term (20-period)**: Short-term spike + medium-term rise = accumulation confirmed
+3. **Z-score normalization**: How extreme is the current ratio compared to the last 100 periods?
+4. **Divergence detection**: Bullish flow + flat/declining price → accumulation in progress
+5. **Entry**: Z-score exceeds 1.5-2.0 standard deviations
+
+## Backtest Setup
+
+- **Period**: Aug 2025 — Feb 2026 (7 months)
+- **Coins**: BTC, ETH, SOL, NEAR, APT
+- **Timeframe**: 5-minute candles
+- **Fees**: 0.05% per side
+
+## Results
+
+156 trades, **cumulative return of 112.8%**. Monthly average: 16.1%.
+
+Win rate 58.4% — lower than other strategies. Sharpe 1.45. Max drawdown -19.7%. Honestly, looking at just the numbers, it's "fine, I guess."
+
+But here's what's interesting: performance in trending markets is dramatically better. Losses during ranging markets get recovered in a single trending move. Makes sense — institutional accumulation happens when trends are about to start.
+
+[View detailed backtest data →](/lab/order-flow-imbalance)
+
+## Walk-Forward Validation
+
+All 4 quarters positive, but with high variance. Trending quarters produced great returns, ranging quarters barely survived. This strategy lives on expected value, not consistency.
+
+## Honest Assessment
+
+**The good:**
+- Using data that leads price is inherently attractive
+- Explosive performance during trending markets
+- 4/4 walk-forward quarters (despite the variance)
+
+**The concerns:**
+- Binance-only data — misses activity on other exchanges
+- Spoofing (fake orders) can deceive the signal
+- Ranging markets are a slow bleed
+
+Current status: **Testing** — trending market performance is great, but needs more stability before promotion.

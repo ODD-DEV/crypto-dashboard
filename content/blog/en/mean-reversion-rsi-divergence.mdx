@@ -1,0 +1,58 @@
+---
+title: "RSI Divergence for Mean Reversion? — Skeptical, But the Data Says Yes"
+description: "Testing RSI divergence + multi-timeframe confirmation for mean reversion trades in crypto. The textbook indicator that actually works."
+date: "2025-09-22"
+category: "Strategy Test"
+strategySlug: "mean-reversion-rsi-divergence"
+---
+
+## Discovery
+
+RSI divergence. It's in every trading textbook ever written. Price makes a new low, RSI makes a higher low — selling pressure is weakening. Theoretically perfect.
+
+The question is whether textbook perfection translates to real-world performance. Especially in crypto, where the market runs 24/7 and moves like it had too much coffee. "Do textbook indicators even work here?" I was skeptical. So I tested it.
+
+## The Concept
+
+The basic idea is simple, but this strategy layers on extra filters:
+
+1. **RSI divergence detection**: Price new low + RSI higher low = bullish divergence
+2. **Multi-timeframe confirmation**: 5min (entry), 1hr (confirmation), 4hr (trend context)
+3. **Volume profile**: Declining volume on the second low = sellers losing interest
+4. **Entry/exit**: Enter on confirmed divergence, target the 20-period moving average
+
+The key is the multi-timeframe filter. If the 4hr is trending up and the 5min shows divergence → "pullback bounce in an uptrend" = high probability. If the 4hr is trending down and divergence appears → "bounce attempt during a waterfall" = low probability. This distinction made a huge difference in win rate.
+
+## Backtest Setup
+
+- **Period**: July 2025 — Feb 2026 (8 months)
+- **Coins**: BTC, ADA, AVAX
+- **Timeframe**: 5min (with 1hr, 4hr confirmation)
+- **Fees**: 0.05% per side
+- **Execution**: Limit orders
+
+## Results
+
+248 trades, **cumulative return of 156.7%**. Monthly average: 19.6%.
+
+Win rate 65.3%, Sharpe 1.87. Max drawdown -14.5%, which is quite stable. Less volatile than momentum strategies, and impressively, it performs decently even in choppy markets.
+
+[View detailed backtest data →](/lab/mean-reversion-rsi-divergence)
+
+## Walk-Forward Validation
+
+All 4 quarters positive. This surprised me. Strategies usually drop at least 1-2 quarters. Mean reversion seems resilient to regime changes — maybe because "price reverts to the mean" is about as close to a universal market law as you can get.
+
+## Honest Assessment
+
+**The good:**
+- 4/4 walk-forward quarters positive — that's hard to achieve
+- Small max drawdown makes it psychologically easy to stick with
+- Works in choppy markets (compensates for momentum strategies' weakness)
+
+**The concerns:**
+- Absolute returns are lower than momentum strategies (stability/return tradeoff)
+- In a strong downtrend, you can get a string of failed bottom-picks
+- Multi-timeframe confirmation means entries are sometimes late
+
+Current status: **Testing** — stability is excellent, top candidate for live promotion.

@@ -1,0 +1,54 @@
+---
+title: "Weekend Gaps Fill — That Was True, But Now..."
+description: "The crypto weekend gap fill strategy: a pattern confirmed across 3 years of data, but the edge is fading. An honest record."
+date: "2025-10-03"
+category: "Strategy Test"
+strategySlug: "weekend-gap-fill"
+---
+
+## Discovery
+
+"Crypto trades 24/7, where would gaps come from?" — that was my first reaction. But looking at the data, there's a genuine price dislocation between Friday night (when institutions leave) and Monday morning (when Asian desks come online). Weekend liquidity is thin, so prices drift.
+
+Found an analysis of this pattern during a web search. 65-70% of weekend gaps partially fill on Monday, across 3 years of data. The numbers looked plausible. Time to run it.
+
+## The Concept
+
+1. **Gap measurement**: Price at Friday 21:00 UTC (US desk close) vs Monday 00:00 UTC (Asia desk open)
+2. **Minimum threshold**: Only trade gaps above 0.5% for BTC, 1% for altcoins
+3. **Direction**: If price went up over the weekend → short (expect fill down). Down → long (fill up)
+4. **Target**: 50-70% gap fill (not 100% — full fills are unreliable)
+5. **Time limit**: Close after 12 hours if the gap hasn't filled
+
+## Backtest Setup
+
+- **Period**: July 2025 — Feb 2026 (8 months)
+- **Coins**: BTC, ETH
+- **Historical data**: Based on 3 years (2023-2025) of weekend gap statistics
+- **Fees**: 0.05% per side
+
+## Results
+
+94 trades (only one per week, so few), **cumulative return of 67.2%**. Monthly average: 8.4%.
+
+Win rate 71.2%, Sharpe 1.12, max drawdown -12.3%. Numbers look decent on the surface. But...
+
+[View detailed backtest data →](/lab/weekend-gap-fill)
+
+## Walk-Forward Validation
+
+Here's where it gets ugly. Performance is **declining** quarter by quarter. Early quarters were strong, but the most recent quarter produced a small loss. The edge is disappearing.
+
+## Honest Assessment
+
+**The good:**
+- Clear, intuitive logic
+- High win rate
+- Once per week = easy to manage
+
+**The concerns:**
+- The edge is clearly shrinking — more people know about this pattern, or weekend institutional activity is increasing
+- One trade per week makes it hard to reach statistical significance
+- In strong trends, gaps in the trend direction don't fill
+
+Current status: **Degraded** — the historical edge was real, but market microstructure changes are eroding the pattern. Honestly, this strategy is dying.

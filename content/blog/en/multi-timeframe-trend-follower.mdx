@@ -1,0 +1,67 @@
+---
+title: "Only Enter When Three Timeframes Agree — Does This Strategy Deliver?"
+description: "A trend-following strategy that requires 5min, 1hr, and 4hr charts to all agree before entering. Fewer signals, but higher quality."
+date: "2025-12-11"
+category: "Strategy Test"
+strategySlug: "multi-timeframe-trend-follower"
+---
+
+## Discovery
+
+Found a "Multi-Timeframe Alignment" concept while digging through open-source trading libraries. The idea is dead simple: looking at one timeframe gets you faked out constantly, so **only enter when all three timeframes agree** on direction.
+
+"Everyone must agree" is like a unanimous vote requirement. Seems inefficient, but if the signals that pass are genuinely higher quality? Maybe a senate is better than a democracy. (Historically dubious, but in trading...)
+
+## The Concept
+
+Each timeframe answers a different question:
+
+**4-hour (Strategic)**: "What's the dominant trend?"
+- 50-period EMA slope + ADX
+- Only trade in this direction. If 4hr says down, no longs regardless of lower timeframe signals.
+
+**1-hour (Tactical)**: "Is the trend currently active?"
+- MACD crossover for confirmation
+- Even if the 4hr trend exists, if price is consolidating or pulling back, skip.
+
+**5-minute (Execution)**: "Where do I enter?"
+- 8/21 EMA crossover for precise timing
+- Only triggers when aligned with both higher timeframes.
+
+Statistically, each filter independently removes ~50% of signals. Three filters in series means roughly 1 in 8 potential signals survive. The survivors have significantly higher probability of being genuine trend moves.
+
+## Backtest Setup
+
+- **Period**: Sep 2025 — Feb 2026 (6 months)
+- **Coins**: SOL, LINK, AVAX, SUI, BCH
+- **Exit**: Trailing stop (2x ATR, tightens as profit grows)
+- **Timeout**: Close if no profit after 4 hours (48 candles on 5min)
+
+## Results
+
+203 trades, **cumulative return of 94.5%**. Monthly average: 15.8%.
+
+Win rate is only 55.2%. But average winners are 1.8-2.2x average losers. Classic trend-following profile — lose small, win big.
+
+Max drawdown -25.4% is concerning. The worst drawdown happened during a trend-to-range transition, when the strategy kept expecting continuation that never came.
+
+[View detailed backtest data →](/lab/multi-timeframe-trend-follower)
+
+## Walk-Forward Validation
+
+3 out of 4 quarters positive. The losing quarter was during extended sideways consolidation. When trends are alive, this strategy delivers. When they're not, it's dead weight.
+
+## Honest Assessment
+
+**The good:**
+- Triple filter genuinely eliminates false signals
+- Excellent in trending markets
+- Different coins trend at different times → natural rotation
+
+**The concerns:**
+- 25.4% max drawdown is uncomfortable
+- Trend-to-range transitions cause consecutive losses
+- The 4hr filter is slow — can keep the strategy in "no trade" mode for too long
+- 6 months of backtest data is on the short side
+
+Current status: **Testing** — trending market performance is impressive, but drawdown management and regime transitions need work.

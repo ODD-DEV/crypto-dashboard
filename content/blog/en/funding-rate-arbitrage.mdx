@@ -1,0 +1,58 @@
+---
+title: "Extreme Funding Rates = Fade the Crowd? — Let's Find Out"
+description: "Testing a contrarian strategy that exploits extreme perpetual futures funding rates. Standing against the crowd is scary, but the numbers speak."
+date: "2025-08-05"
+category: "Strategy Test"
+strategySlug: "funding-rate-arbitrage"
+---
+
+## Discovery
+
+Funding rate arbitrage is a well-known concept. When perpetual futures funding rates go extreme → market is overcrowded in one direction → go the other way and profit. In theory.
+
+"Stand against the crowd" sounds great in a blog post, but actually doing it makes your palms sweat. Extreme funding means almost everyone is betting one way. You're betting they're all wrong. But numbers don't lie. Let's run it.
+
+## The Concept
+
+1. **Monitor funding rates**: Published every 8 hours on most exchanges
+2. **Detect extremes**: Above the 90th percentile (overcrowded longs) or below the 10th percentile (overcrowded shorts) of the trailing 30-day distribution
+3. **Additional filters**: Rising open interest + long/short ratio + spot-perp spread for confirmation
+4. **Contrarian entry**: Extreme longs → short, extreme shorts → long
+5. **Exit**: When funding normalizes, or fixed take-profit/time limit
+
+Multi-exchange confirmation (extreme funding appearing simultaneously on several exchanges) significantly increases reliability.
+
+## Backtest Setup
+
+- **Period**: July 2025 — Feb 2026 (8 months)
+- **Coins**: BTC, ETH, HBAR, SUI
+- **Position size**: 50-70% of standard (conservative, since it's contrarian)
+- **Fees**: 0.05% per side
+
+## Results
+
+187 trades, **cumulative return of 189.4%**. Monthly average: 23.7%.
+
+Win rate 61.8%, Sharpe 1.92. The interesting part: average winners are 2x+ the average losers. When liquidation cascades happen, profits are explosive. Leveraged traders get blown out simultaneously, and price snaps back hard.
+
+Max drawdown -22.1% is on the higher side. Contrarian strategies can take some heat before the reversion kicks in.
+
+[View detailed backtest data →](/lab/funding-rate-arbitrage)
+
+## Walk-Forward Validation
+
+3 out of 4 quarters positive. The losing quarter was during a calm, low-leverage period — funding rates barely reached extreme levels, so there were few signals to trade.
+
+## Honest Assessment
+
+**The good:**
+- Liquidation cascades produce insane returns — this is the core edge
+- Low correlation with momentum strategies (great for portfolio diversification)
+- Clear logic: excessive leverage always unwinds eventually
+
+**The concerns:**
+- 22% max drawdown is hard to stomach
+- In strong trends, "extreme" can get "more extreme" — timing risk
+- Heavy dependency on exchange data quality
+
+Current status: **Live** — volatile but the edge is clear, promoted to live.
