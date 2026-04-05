@@ -8,6 +8,7 @@ import { LocaleSwitcher } from './LocaleSwitcher';
 
 const navLinks = [
   { href: '/', key: 'home' },
+  { href: '/dashboard/portfolio', key: 'dashboard' },
   { href: '/about', key: 'about' },
 ] as const;
 

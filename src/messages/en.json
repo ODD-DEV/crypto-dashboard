@@ -5,6 +5,7 @@
   },
   "nav": {
     "home": "Home",
+    "dashboard": "Dashboard",
     "about": "About"
   },
   "home": {
@@ -30,6 +31,14 @@
       "winRate": "Win Rate",
       "sharpe": "Sharpe"
     }
+  },
+  "login": {
+    "title": "Dashboard Login",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "error": "Invalid email or password",
+    "loading": "Signing in..."
   },
   "footer": {
     "disclaimer": "This is a personal research blog. Not financial advice. Past performance does not guarantee future results. I'm just a nerd with a keyboard.",

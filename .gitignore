@@ -3,3 +3,6 @@ node_modules/
 out/
 .env*
 *.tsbuildinfo
+scripts/test-realtime.sh
+scripts/migrate.ts
+supabase/.temp/
