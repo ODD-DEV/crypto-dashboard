@@ -4,6 +4,8 @@ import { DashboardClient } from '@/components/dashboard/DashboardClient';
 import backtestData from '@/data/backtest-data.json';
 import type { BacktestData, StrategyFilter } from '@/types/backtest';
 
+export const dynamic = 'force-dynamic';
+
 const slugToFilter: Record<string, StrategyFilter> = {
   portfolio: 'ALL',
   vwap: 'VWAP',
@@ -17,10 +19,6 @@ const slugToName: Record<string, string> = {
   consol: 'Consolidation Short',
   dipbuy: 'DipBuy',
 };
-
-export function generateStaticParams() {
-  return Object.keys(slugToFilter).map((strategy) => ({ strategy }));
-}
 
 export async function generateMetadata({
   params,
