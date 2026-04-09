@@ -56,7 +56,9 @@ export function getMonthlyPnlForStrategy(strategy: StrategyFilter) {
           ? m.vwap
           : strategy === 'CONSOL'
             ? m.consol
-            : m.dipbuy;
+            : strategy === 'DIPBUY'
+              ? m.dipbuy
+              : m.rsi_mr;
     return { month: m.month, return: Math.round((value / Math.max(m.start_eq, 1)) * 1000) / 10 };
   });
 }
@@ -78,6 +80,10 @@ export function getStrategySlugMap(): Record<string, { name: string; description
     dipbuy: {
       name: 'DipBuy',
       description: 'Sharp drop detection → long entry. HBAR/ADA/BTC, 10x leverage.',
+    },
+    'rsi-mr': {
+      name: 'RSI Mean Reversion',
+      description: 'Adaptive RSI + Trend Quality Gate on SUIUSDT. 7x leverage.',
     },
   };
 }

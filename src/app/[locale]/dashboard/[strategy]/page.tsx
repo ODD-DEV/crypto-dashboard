@@ -11,6 +11,7 @@ const slugToFilter: Record<string, StrategyFilter> = {
   vwap: 'VWAP',
   consol: 'CONSOL',
   dipbuy: 'DIPBUY',
+  'rsi-mr': 'RSI_MR',
 };
 
 const slugToName: Record<string, string> = {
@@ -18,6 +19,7 @@ const slugToName: Record<string, string> = {
   vwap: 'VWAP Long',
   consol: 'Consolidation Short',
   dipbuy: 'DipBuy',
+  'rsi-mr': 'RSI Mean Reversion',
 };
 
 export async function generateMetadata({

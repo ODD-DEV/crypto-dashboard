@@ -65,7 +65,8 @@ export function DashboardClient({ data, strategyFilter }: Props) {
         strategyFilter === 'ALL' ? m.total
         : strategyFilter === 'VWAP' ? m.vwap
         : strategyFilter === 'CONSOL' ? m.consol
-        : m.dipbuy;
+        : strategyFilter === 'DIPBUY' ? m.dipbuy
+        : m.rsi_mr;
       const pct = m.start_eq > 0 ? Math.round((value / m.start_eq) * 1000) / 10 : 0;
       return { month: m.month, return: pct };
     });

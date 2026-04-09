@@ -8,6 +8,7 @@ const strategies = [
   { slug: 'vwap', label: 'VWAP', color: '#818cf8' },
   { slug: 'consol', label: 'Consol', color: '#f472b6' },
   { slug: 'dipbuy', label: 'DipBuy', color: '#34d399' },
+  { slug: 'rsi-mr', label: 'RSI MR', color: '#fb923c' },
   { slug: 'live', label: 'Live', color: '#f59e0b' },
 ];
 

@@ -37,6 +37,7 @@ export interface MonthlyPnl {
   consol: number;
   dipbuy: number;
   fvg: number;
+  rsi_mr: number;
   total: number;
   start_eq: number;
   end_eq: number;
@@ -66,5 +67,5 @@ export interface CoinStats {
   win_rate: number;
 }
 
-export type StrategyFilter = 'ALL' | 'VWAP' | 'CONSOL' | 'DIPBUY';
+export type StrategyFilter = 'ALL' | 'VWAP' | 'CONSOL' | 'DIPBUY' | 'RSI_MR';
 export type Timeframe = '5m' | '15m' | '1h' | '4h' | '1d';

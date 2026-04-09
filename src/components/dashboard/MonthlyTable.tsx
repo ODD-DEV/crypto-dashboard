@@ -26,7 +26,8 @@ export function MonthlyTable({ data, filter }: Props) {
           const total = filter === 'ALL' ? m.total
             : filter === 'VWAP' ? m.vwap
             : filter === 'CONSOL' ? m.consol
-            : m.dipbuy;
+            : filter === 'DIPBUY' ? m.dipbuy
+            : m.rsi_mr;
           return (
             <div key={m.month} className="flex items-center justify-between rounded-lg border border-border/30 px-3 py-2">
               <div>
@@ -61,6 +62,7 @@ export function MonthlyTable({ data, filter }: Props) {
                   <th className="py-2 text-right font-medium">VWAP</th>
                   <th className="py-2 text-right font-medium">CONSOL</th>
                   <th className="py-2 text-right font-medium">DIPBUY</th>
+                  <th className="py-2 text-right font-medium">RSI MR</th>
                 </>
               )}
               <th className="py-2 text-right font-medium">Total</th>
@@ -73,7 +75,8 @@ export function MonthlyTable({ data, filter }: Props) {
               const total = filter === 'ALL' ? m.total
                 : filter === 'VWAP' ? m.vwap
                 : filter === 'CONSOL' ? m.consol
-                : m.dipbuy;
+                : filter === 'DIPBUY' ? m.dipbuy
+                : m.rsi_mr;
               const pctColor = total > 0 ? 'text-accent-profit' : total < 0 ? 'text-accent-loss' : 'text-text-muted';
 
               return (
@@ -91,6 +94,9 @@ export function MonthlyTable({ data, filter }: Props) {
                       </td>
                       <td className={`py-2 text-right font-[family-name:var(--font-jetbrains)] ${m.dipbuy > 0 ? 'text-accent-profit' : m.dipbuy < 0 ? 'text-accent-loss' : 'text-text-muted'}`}>
                         {fmt(m.dipbuy)}
+                      </td>
+                      <td className={`py-2 text-right font-[family-name:var(--font-jetbrains)] ${m.rsi_mr > 0 ? 'text-accent-profit' : m.rsi_mr < 0 ? 'text-accent-loss' : 'text-text-muted'}`}>
+                        {fmt(m.rsi_mr)}
                       </td>
                     </>
                   )}

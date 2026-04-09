@@ -10,6 +10,7 @@ const stratColors: Record<string, string> = {
   VWAP: '#818cf8',
   CONSOL: '#f472b6',
   DIPBUY: '#34d399',
+  RSI_MR: '#fb923c',
 };
 
 function fmt(n: number): string {
