@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T11:20:36.293530Z",
+  "generated_at": "2026-04-09T11:44:56.776539Z",
   "initial_capital": 4000.0,
   "period": {
     "start": "2024-01-01",
@@ -10,7 +10,7 @@
     "total_return_pct": 2551.5,
     "total_trades": 660,
     "win_rate": 51.7,
-    "max_drawdown_pct": 51.5,
+    "max_drawdown_pct": 35.5,
     "final_equity": 106059.44,
     "total_withdrawn": 0.0
   },
