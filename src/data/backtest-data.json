@@ -4311,7 +4311,8 @@
       "total": 1098.15,
       "start_eq": 8000.0,
       "end_eq": 9098.15,
-      "return_pct": 13.7
+      "return_pct": 13.7,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-02",
@@ -4322,7 +4323,8 @@
       "total": 234.73,
       "start_eq": 9098.15,
       "end_eq": 9332.87,
-      "return_pct": 2.6
+      "return_pct": 2.6,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-03",
@@ -4333,7 +4335,8 @@
       "total": 142.91,
       "start_eq": 9332.87,
       "end_eq": 9475.78,
-      "return_pct": 1.5
+      "return_pct": 1.5,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-04",
@@ -4344,7 +4347,8 @@
       "total": -1744.55,
       "start_eq": 9475.78,
       "end_eq": 7731.23,
-      "return_pct": -18.4
+      "return_pct": -18.4,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-05",
@@ -4355,7 +4359,8 @@
       "total": 1103.13,
       "start_eq": 7731.23,
       "end_eq": 8834.35,
-      "return_pct": 14.3
+      "return_pct": 14.3,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-06",
@@ -4366,7 +4371,8 @@
       "total": 3718.87,
       "start_eq": 8834.35,
       "end_eq": 12553.23,
-      "return_pct": 42.1
+      "return_pct": 42.1,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-07",
@@ -4377,7 +4383,8 @@
       "total": 1912.21,
       "start_eq": 12553.23,
       "end_eq": 14465.43,
-      "return_pct": 15.2
+      "return_pct": 15.2,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-08",
@@ -4388,7 +4395,8 @@
       "total": 3266.04,
       "start_eq": 14465.43,
       "end_eq": 17731.47,
-      "return_pct": 22.6
+      "return_pct": 22.6,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-09",
@@ -4399,7 +4407,8 @@
       "total": -169.8,
       "start_eq": 17731.47,
       "end_eq": 17561.67,
-      "return_pct": -1.0
+      "return_pct": -1.0,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-10",
@@ -4410,7 +4419,8 @@
       "total": 1628.0,
       "start_eq": 17561.67,
       "end_eq": 19189.67,
-      "return_pct": 9.3
+      "return_pct": 9.3,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-11",
@@ -4421,7 +4431,8 @@
       "total": 5093.34,
       "start_eq": 19189.67,
       "end_eq": 24283.0,
-      "return_pct": 26.5
+      "return_pct": 26.5,
+      "rsi_mr": 0.0
     },
     {
       "month": "2024-12",
@@ -4432,7 +4443,8 @@
       "total": 7395.94,
       "start_eq": 24283.0,
       "end_eq": 31678.95,
-      "return_pct": 30.5
+      "return_pct": 30.5,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-01",
@@ -4443,7 +4455,8 @@
       "total": 7042.06,
       "start_eq": 31678.95,
       "end_eq": 38721.01,
-      "return_pct": 22.2
+      "return_pct": 22.2,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-02",
@@ -4454,7 +4467,8 @@
       "total": 13328.67,
       "start_eq": 38721.01,
       "end_eq": 52049.68,
-      "return_pct": 34.4
+      "return_pct": 34.4,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-03",
@@ -4465,7 +4479,8 @@
       "total": 6269.56,
       "start_eq": 52049.68,
       "end_eq": 58319.24,
-      "return_pct": 12.0
+      "return_pct": 12.0,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-04",
@@ -4476,7 +4491,8 @@
       "total": -4786.23,
       "start_eq": 58319.24,
       "end_eq": 53533.01,
-      "return_pct": -8.2
+      "return_pct": -8.2,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-05",
@@ -4487,7 +4503,8 @@
       "total": 229.3,
       "start_eq": 53533.01,
       "end_eq": 53762.31,
-      "return_pct": 0.4
+      "return_pct": 0.4,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-06",
@@ -4498,7 +4515,8 @@
       "total": 7150.07,
       "start_eq": 53762.31,
       "end_eq": 60912.38,
-      "return_pct": 13.3
+      "return_pct": 13.3,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-07",
@@ -4509,7 +4527,8 @@
       "total": 47.03,
       "start_eq": 60912.38,
       "end_eq": 60959.41,
-      "return_pct": 0.1
+      "return_pct": 0.1,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-08",
@@ -4520,7 +4539,8 @@
       "total": 1553.97,
       "start_eq": 60959.41,
       "end_eq": 62513.38,
-      "return_pct": 2.5
+      "return_pct": 2.5,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-09",
@@ -4531,7 +4551,8 @@
       "total": 4415.58,
       "start_eq": 62513.38,
       "end_eq": 66928.95,
-      "return_pct": 7.1
+      "return_pct": 7.1,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-10",
@@ -4542,7 +4563,8 @@
       "total": -3653.86,
       "start_eq": 66928.95,
       "end_eq": 63275.1,
-      "return_pct": -5.5
+      "return_pct": -5.5,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-11",
@@ -4553,7 +4575,8 @@
       "total": 20276.78,
       "start_eq": 63275.1,
       "end_eq": 83551.87,
-      "return_pct": 32.0
+      "return_pct": 32.0,
+      "rsi_mr": 0.0
     },
     {
       "month": "2025-12",
@@ -4564,7 +4587,8 @@
       "total": 8017.18,
       "start_eq": 83551.87,
       "end_eq": 91569.06,
-      "return_pct": 9.6
+      "return_pct": 9.6,
+      "rsi_mr": 0.0
     },
     {
       "month": "2026-01",
@@ -4575,7 +4599,8 @@
       "total": -567.04,
       "start_eq": 91569.06,
       "end_eq": 91002.02,
-      "return_pct": -0.6
+      "return_pct": -0.6,
+      "rsi_mr": 0.0
     },
     {
       "month": "2026-02",
@@ -4586,7 +4611,8 @@
       "total": 288.05,
       "start_eq": 91002.02,
       "end_eq": 91290.07,
-      "return_pct": 0.3
+      "return_pct": 0.3,
+      "rsi_mr": 0.0
     },
     {
       "month": "2026-03",
@@ -4597,7 +4623,8 @@
       "total": 13616.14,
       "start_eq": 91290.07,
       "end_eq": 104906.2,
-      "return_pct": 14.9
+      "return_pct": 14.9,
+      "rsi_mr": 0.0
     },
     {
       "month": "2026-04",
@@ -4608,7 +4635,8 @@
       "total": -598.79,
       "start_eq": 104906.2,
       "end_eq": 104307.41,
-      "return_pct": -0.6
+      "return_pct": -0.6,
+      "rsi_mr": 0.0
     },
     {
       "month": "2026-05",
@@ -4619,7 +4647,8 @@
       "total": 0.0,
       "start_eq": 104307.41,
       "end_eq": 104307.41,
-      "return_pct": 0.0
+      "return_pct": 0.0,
+      "rsi_mr": 0.0
     }
   ],
   "trades": [
