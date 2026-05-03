@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-04-14T12:13:24.208444Z",
+  "generated_at": "2026-05-03T01:38:33.114055Z",
   "initial_capital": 4000.0,
   "period": {
     "start": "2024-01-01",
-    "end": "2026-04-13"
+    "end": "2026-05-02"
   },
   "summary": {
-    "total_pnl": 96092.19,
-    "total_return_pct": 2402.3,
-    "total_trades": 611,
-    "win_rate": 50.7,
+    "total_pnl": 96307.41,
+    "total_return_pct": 2407.7,
+    "total_trades": 617,
+    "win_rate": 51.1,
     "max_drawdown_pct": 41.6,
-    "final_equity": 100092.19,
+    "final_equity": 100307.41,
     "total_withdrawn": 0.0
   },
   "strategies": {
     "VWAP": {
-      "trades": 266,
-      "pnl": 49224.22,
-      "win_rate": 43.2,
-      "avg_pnl": 185.05
+      "trades": 267,
+      "pnl": 49348.26,
+      "win_rate": 43.4,
+      "avg_pnl": 184.82
     },
     "CONSOL": {
-      "trades": 95,
-      "pnl": 16159.45,
-      "win_rate": 73.7,
-      "avg_pnl": 170.1
+      "trades": 100,
+      "pnl": 16250.63,
+      "win_rate": 74.0,
+      "avg_pnl": 162.51
     },
     "DIPBUY": {
       "trades": 250,
@@ -4204,6 +4204,101 @@
       "date": "2026-04-13",
       "equity": 100092.19,
       "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-14",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-15",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-16",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-17",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-18",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-19",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-20",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-21",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-22",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-23",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-24",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-25",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-26",
+      "equity": 100092.19,
+      "drawdown_pct": 2.1
+    },
+    {
+      "date": "2026-04-27",
+      "equity": 99660.14,
+      "drawdown_pct": 2.5
+    },
+    {
+      "date": "2026-04-28",
+      "equity": 100450.96,
+      "drawdown_pct": 1.7
+    },
+    {
+      "date": "2026-04-29",
+      "equity": 100010.02,
+      "drawdown_pct": 2.2
+    },
+    {
+      "date": "2026-04-30",
+      "equity": 100307.41,
+      "drawdown_pct": 1.9
+    },
+    {
+      "date": "2026-05-01",
+      "equity": 100307.41,
+      "drawdown_pct": 1.9
+    },
+    {
+      "date": "2026-05-02",
+      "equity": 100307.41,
+      "drawdown_pct": 1.9
     }
   ],
   "monthly_pnl": [
@@ -4506,14 +4601,25 @@
     },
     {
       "month": "2026-04",
-      "vwap": -814.01,
+      "vwap": -689.97,
+      "consol": 91.18,
+      "dipbuy": 0.0,
+      "fvg": 0.0,
+      "total": -598.79,
+      "start_eq": 100906.2,
+      "end_eq": 100307.41,
+      "return_pct": -0.6
+    },
+    {
+      "month": "2026-05",
+      "vwap": 0.0,
       "consol": 0.0,
       "dipbuy": 0.0,
       "fvg": 0.0,
-      "total": -814.01,
-      "start_eq": 100906.2,
-      "end_eq": 100092.19,
-      "return_pct": -0.8
+      "total": 0.0,
+      "start_eq": 100307.41,
+      "end_eq": 100307.41,
+      "return_pct": 0.0
     }
   ],
   "trades": [
@@ -14292,28 +14398,124 @@
       "pnl": 477.24,
       "pnl_pct": 9.5,
       "bars": 576
+    },
+    {
+      "id": 612,
+      "entry_time": "2026-04-26T04:35:00",
+      "exit_time": "2026-04-28T04:35:00",
+      "coin": "NEARUSDT",
+      "strategy": "CONSOL",
+      "side": "short",
+      "exit_type": "TO",
+      "entry_price": 1.394582,
+      "exit_price": 1.360408,
+      "margin": 1250.0,
+      "leverage": 5,
+      "pnl": 141.28,
+      "pnl_pct": 11.3,
+      "bars": 576
+    },
+    {
+      "id": 613,
+      "entry_time": "2026-04-26T04:35:00",
+      "exit_time": "2026-04-28T04:35:00",
+      "coin": "APTUSDT",
+      "strategy": "CONSOL",
+      "side": "short",
+      "exit_type": "TO",
+      "entry_price": 0.963411,
+      "exit_price": 0.979494,
+      "margin": 1250.0,
+      "leverage": 5,
+      "pnl": -116.21,
+      "pnl_pct": -9.3,
+      "bars": 576
+    },
+    {
+      "id": 614,
+      "entry_time": "2026-04-26T04:35:00",
+      "exit_time": "2026-04-28T04:35:00",
+      "coin": "DOTUSDT",
+      "strategy": "CONSOL",
+      "side": "short",
+      "exit_type": "TO",
+      "entry_price": 1.240628,
+      "exit_price": 1.23437,
+      "margin": 1250.0,
+      "leverage": 5,
+      "pnl": 19.65,
+      "pnl_pct": 1.6,
+      "bars": 576
+    },
+    {
+      "id": 615,
+      "entry_time": "2026-04-26T04:35:00",
+      "exit_time": "2026-04-28T04:35:00",
+      "coin": "UNIUSDT",
+      "strategy": "CONSOL",
+      "side": "short",
+      "exit_type": "TO",
+      "entry_price": 3.244027,
+      "exit_price": 3.221966,
+      "margin": 1250.0,
+      "leverage": 5,
+      "pnl": 30.63,
+      "pnl_pct": 2.5,
+      "bars": 576
+    },
+    {
+      "id": 616,
+      "entry_time": "2026-04-26T04:35:00",
+      "exit_time": "2026-04-28T04:35:00",
+      "coin": "SUIUSDT",
+      "strategy": "CONSOL",
+      "side": "short",
+      "exit_type": "TO",
+      "entry_price": 0.93392,
+      "exit_price": 0.929779,
+      "margin": 1250.0,
+      "leverage": 5,
+      "pnl": 15.84,
+      "pnl_pct": 1.3,
+      "bars": 576
+    },
+    {
+      "id": 617,
+      "entry_time": "2026-04-27T08:10:00",
+      "exit_time": "2026-04-29T08:10:00",
+      "coin": "ICPUSDT",
+      "strategy": "VWAP",
+      "side": "long",
+      "exit_type": "TO",
+      "entry_price": 2.411723,
+      "exit_price": 2.428271,
+      "margin": 5000.0,
+      "leverage": 5,
+      "pnl": 124.04,
+      "pnl_pct": 2.5,
+      "bars": 576
     }
   ],
   "per_coin": {
     "ICPUSDT": {
-      "trades": 63,
-      "pnl": 29003.66,
-      "win_rate": 47.6
-    },
-    "APTUSDT": {
-      "trades": 42,
-      "pnl": 16395.72,
-      "win_rate": 64.3
+      "trades": 64,
+      "pnl": 29127.7,
+      "win_rate": 48.4
     },
     "HBARUSDT": {
       "trades": 186,
       "pnl": 16297.39,
       "win_rate": 41.4
     },
+    "APTUSDT": {
+      "trades": 43,
+      "pnl": 16279.51,
+      "win_rate": 62.8
+    },
     "SUIUSDT": {
-      "trades": 53,
-      "pnl": 9398.94,
-      "win_rate": 50.9
+      "trades": 54,
+      "pnl": 9414.78,
+      "win_rate": 51.9
     },
     "ADAUSDT": {
       "trades": 69,
@@ -14326,14 +14528,14 @@
       "win_rate": 72.0
     },
     "NEARUSDT": {
-      "trades": 38,
-      "pnl": 5991.4,
-      "win_rate": 55.3
+      "trades": 39,
+      "pnl": 6132.67,
+      "win_rate": 56.4
     },
     "DOTUSDT": {
-      "trades": 18,
-      "pnl": 3005.92,
-      "win_rate": 50.0
+      "trades": 19,
+      "pnl": 3025.57,
+      "win_rate": 52.6
     },
     "AVAXUSDT": {
       "trades": 15,
@@ -14341,9 +14543,9 @@
       "win_rate": 53.3
     },
     "UNIUSDT": {
-      "trades": 16,
-      "pnl": 2497.4,
-      "win_rate": 75.0
+      "trades": 17,
+      "pnl": 2528.03,
+      "win_rate": 76.5
     },
     "ETHUSDT": {
       "trades": 2,
